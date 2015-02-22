@@ -1,4 +1,10 @@
 jQuery(document).ready(function() {
+
+    // Prevent endless spin
+    setInterval( function() {
+    jQuery('.woocommerce .blockUI').remove();
+    }, 3000);
+
     // Init Wizard
 
     if (fesiCheckoutSteps.isAuthorizedUser == false && jQuery.inArray('login', fesiCheckoutSteps.disableSteps) < 0) {
